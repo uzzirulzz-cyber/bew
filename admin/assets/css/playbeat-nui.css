@@ -1,0 +1,229 @@
+/* ============================================================
+   PLAYBEAT ADMIN — Now UI Dashboard playbeat layer
+   Visual-only overrides on top of now-ui-dashboard.css v1.5.0.
+   Palette: Playbeat blue (#0070fa / #649bff) + gold (#F5C542).
+   ============================================================ */
+
+/* ---------- sidebar brand ---------- */
+.sidebar .logo a.logo-normal.pb-logo {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar .logo .pb-logo img {
+  display: block;
+  max-width: 130px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.sidebar .logo a.logo-mini {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* sidebar section label */
+.sidebar-wrapper .nav .pb-nav-section {
+  padding: 18px 23px 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- panel header — Playbeat gradient ---------- */
+.panel-header.pb-header {
+  height: auto;
+  background:
+    radial-gradient(720px 320px at 88% -20%, rgba(245, 197, 66, 0.22), transparent 60%),
+    linear-gradient(135deg, #0070fa 0%, #649bff 55%, #0644a8 100%);
+  padding: 78px 0 118px;
+}
+
+.panel-header.pb-header h1 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.panel-header.pb-header p {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.panel-header.pb-header .pb-header-chips {
+  margin-top: 18px;
+}
+
+.panel-header.pb-header .pb-header-chips .badge {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 7px 14px;
+  border-radius: 30px;
+  margin: 0 4px;
+  text-transform: uppercase;
+}
+
+/* ---------- KPI card-stats accents ---------- */
+.card.card-stats .icon-big {
+  font-size: 2.4em;
+}
+
+.card.card-stats .card-title {
+  font-size: 1.6em;
+}
+
+/* ---------- integration cards ---------- */
+.pb-int-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 8px;
+}
+
+.pb-int-card .card-header .icon-big {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  color: #fff;
+  background-image: linear-gradient(135deg, #649bff, #0070fa);
+  box-shadow: 0 8px 18px -8px rgba(0, 112, 250, 0.55);
+  flex: 0 0 auto;
+}
+
+.pb-int-card .card-header .pb-int-title {
+  margin-right: auto;
+}
+
+.pb-int-card .card-header h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  color: #2c3547;
+}
+
+.pb-int-card .card-header h5 {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #9a9fb0;
+  font-weight: 400;
+}
+
+.pb-int-card .card-body .pb-int-desc {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+/* key/value rows */
+.pb-int-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  padding: 9px 0;
+  border-bottom: 1px solid #eef0f5;
+  font-size: 13.5px;
+}
+
+.pb-int-row:last-of-type {
+  border-bottom: 0;
+}
+
+.pb-int-row .k {
+  color: #9a9fb0;
+  flex: 0 0 auto;
+}
+
+.pb-int-row .v {
+  color: #2c3547;
+  font-weight: 600;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* action note inside card footer */
+.pb-int-note {
+  font-size: 12.5px;
+  line-height: 1.6;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 4px;
+}
+
+.pb-int-note--warn {
+  color: #8a6d1a;
+  background: #fdf6e0;
+  border: 1px dashed #ecd9a0;
+}
+
+.pb-int-note--info {
+  color: #24518f;
+  background: #eef5ff;
+  border: 1px solid #cfe2fb;
+}
+
+/* status badges */
+.pb-badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 5px 11px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.pb-badge--ok {
+  color: #12805c;
+  background: #e5f6ec;
+  border: 1px solid #bfe8d2;
+}
+
+.pb-badge--pending {
+  color: #9a7410;
+  background: #fdf4dd;
+  border: 1px solid #f0dfa8;
+}
+
+/* ---------- quick actions ---------- */
+.pb-actions .btn {
+  margin: 4px 6px 4px 0;
+}
+
+/* ---------- footer ---------- */
+.footer .pb-foot-copyright {
+  color: #9a9fb0;
+  font-size: 13px;
+}
+
+/* ============================================================
+   DESKTOP FIX — headless/odd device metrics can match the
+   theme's iPad device-query (min/max-device-width 768-1024
+   landscape), which force-hides the sidebar and stretches the
+   main panel. Restore the intended desktop layout at >=992px.
+   ============================================================ */
+@media (min-width: 992px) {
+  .sidebar,
+  .bootstrap-navbar {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .main-panel {
+    width: calc(100% - 260px) !important;
+  }
+
+  .navbar .navbar-toggle {
+    display: none !important;
+  }
+}

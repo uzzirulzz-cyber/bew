@@ -12,6 +12,7 @@ the production integrations. No backend, no secrets.
 | `about.html`    | Themed about page (template demo content)                          |
 | `elements.html` | Theme element gallery — buttons, tables, forms, tabs, typography   |
 | `contact.html`  | Branded contact page with form (client-side visual submit)         |
+| `admin/index.html` | **Now UI Dashboard edition** of the admin bootstrap (Creative Tim Now UI v1.5.0, orange sidebar, KPI card-stats + integration cards) |
 
 ## Structure
 
@@ -21,6 +22,7 @@ js/      jQuery 1.12.1, Popper, Bootstrap, Owl Carousel, Nice Select,
          AjaxChimp stub, jQuery Form, jQuery Validation + custom scripts
 fonts/   Themify / Flaticon / FontAwesome webfonts
 img/     Playbeat branding + generated section backgrounds & placeholders
+admin/   Now UI Dashboard build (self-contained assets/ tree)
 ```
 
 ## Integration values shown on index.html
