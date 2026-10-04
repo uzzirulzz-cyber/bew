@@ -1,0 +1,285 @@
+/* ============================================================
+   PLAYBEAT ADMIN BOOTSTRAP — visual layer for index.html
+   Palette + type follow the Medico theme (blue gradient
+   #649bff -> #0070fa, Playfair Display headings, Roboto body).
+   Visual-only: no markup/logic coupling with other pages.
+   ============================================================ */
+
+/* ---------- KPI stat tiles ---------- */
+.pb-kpis {
+  padding-top: 30px;
+}
+
+/* brand size guard — the original theme assumed a small intrinsic logo */
+.main_menu .navbar-brand img {
+  height: auto;
+  max-height: 60px;
+  width: auto;
+}
+
+/* light-section heading (Store Overview / Quick Actions) */
+.pb-sec-head h2 {
+  color: #10224a;
+}
+
+.pb-sec-head p {
+  color: #5f6d82;
+}
+
+.pb-kpi {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 112, 250, 0.14);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 14px 34px -18px rgba(0, 30, 90, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+}
+
+.pb-kpi:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 112, 250, 0.35);
+  box-shadow: 0 22px 44px -20px rgba(0, 30, 90, 0.35);
+}
+
+.pb-kpi .pb-kpi-label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a8699;
+  margin-bottom: 8px;
+}
+
+.pb-kpi .pb-kpi-value {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #10224a;
+  line-height: 1.1;
+}
+
+.pb-kpi .pb-kpi-sub {
+  font-size: 13px;
+  color: #8b97ab;
+  margin-top: 8px;
+}
+
+.pb-kpi::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: auto;
+  top: -1px;
+  width: 44px;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+}
+
+/* ---------- Integrations section ---------- */
+.pb-integrations {
+  background: #f4f8ff;
+}
+
+.pb-int-card {
+  background: #fff;
+  border: 1px solid rgba(0, 112, 250, 0.12);
+  border-radius: 18px;
+  padding: 30px 28px;
+  box-shadow: 0 14px 34px -18px rgba(0, 30, 90, 0.22);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pb-int-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 112, 250, 0.4);
+  box-shadow: 0 22px 44px -20px rgba(0, 30, 90, 0.35);
+}
+
+.pb-int-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.pb-int-head h4 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #10224a;
+  font-size: 22px;
+}
+
+.pb-int-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
+  color: #fff;
+  font-size: 20px;
+}
+
+/* status chips */
+.pb-chip {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pb-chip--ok {
+  background: #e5f6ec;
+  color: #12805c;
+  border: 1px solid #bfe8d2;
+}
+
+.pb-chip--pending {
+  background: #fdf4dd;
+  color: #9a7410;
+  border: 1px solid #f0dfa8;
+}
+
+.pb-int-desc {
+  color: #5f6d82;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin: 10px 0 16px;
+}
+
+/* key/value rows */
+.pb-int-rows {
+  border-top: 1px solid #e8eefb;
+  margin-top: auto;
+}
+
+.pb-int-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8eefb;
+  font-size: 13.5px;
+}
+
+.pb-int-row:last-child {
+  border-bottom: 0;
+}
+
+.pb-int-row .k {
+  color: #8b97ab;
+  flex: 0 0 auto;
+}
+
+.pb-int-row .v {
+  color: #16294f;
+  font-weight: 500;
+  text-align: right;
+  word-break: break-all;
+}
+
+.pb-int-note {
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #7a6a2f;
+  background: #fdf9ec;
+  border: 1px dashed #ecd9a0;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.pb-int-note--info {
+  color: #24518f;
+  background: #eef5ff;
+  border-color: #b9d4f7;
+}
+
+/* ---------- quick action strip ---------- */
+.pb-actions {
+  padding-bottom: 20px;
+}
+
+.pb-actions .btn_1,
+.pb-actions .btn_2 {
+  margin: 6px 8px 6px 0;
+}
+
+/* section heading helper consistent with theme */
+.pb-sec-head {
+  margin-bottom: 46px;
+}
+
+.pb-sec-head h2 {
+  margin-bottom: 14px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.pb-sec-head p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ---------- contact page map placeholder ---------- */
+.pb-map-card {
+  height: 420px;
+  border-radius: 18px;
+  background:
+    radial-gradient(700px 340px at 85% -10%, rgba(245, 197, 66, 0.16), transparent 60%),
+    linear-gradient(135deg, #649bff 0%, #0070fa 60%, #0644a8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 32px;
+}
+
+.pb-map-card h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 18px 0 10px;
+  color: #fff;
+}
+
+.pb-map-card p {
+  max-width: 460px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.pb-map-card .pb-map-pin {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+}
+
+.pb-map-card .btn_2 {
+  background-image: linear-gradient(to right, #fff, #fff, #fff);
+  color: #0070fa;
+}
